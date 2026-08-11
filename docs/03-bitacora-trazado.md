@@ -1,7 +1,6 @@
-# 03 — Bitácora de trazado (entregable del punto 4)
+# 03 — Bitácora ampliada (material extra)
 
-> *"Cada estudiante documenta en su cuaderno o editor de texto el nombre del archivo Java y
-> el método donde se ejecuta cada paso del flujo en su propio PFC."*
+> Ampliación voluntaria de la tabla oficial de 9 pasos que está en [00-tabla-y-preguntas.md](00-tabla-y-preguntas.md).
 
 **PFC:** ARTISYNC · **Petición trazada:** `POST /api/v1/pedidos`
 **Paquete base:** `uteq.edu.ec.artisync` · **Raíz:** `artisync/Backend/src/main/java/uteq/edu/ec/artisync/`
@@ -24,7 +23,7 @@
 | 8.b | Carga de usuario y roles desde BD | `security/CustomUserDetailsService.java` | `loadUserByUsername()` | 32 | Sí |
 | 8.c | Principal autenticado | `security/CustomUserDetails.java` | constructor (`getIdUsuario()`) | 14 | Sí |
 | 8.d | Publicación en el `SecurityContext` | `security/JwtAuthenticationFilter.java` | `doFilterInternal()` | 81 | Sí |
-| 9 | **HandlerMapping** | `RequestMappingHandlerMapping` | `getHandlerInternal()` | — | No (framework) |
+| 9 | **HandlerMapping** | `RequestMappingHandlerMapping` | `getHandler()` | — | No (framework) |
 | 10 | Deserialización + Bean Validation del cuerpo | `dto/peticion/pedido/PeticionCrearPedido.java` | `@NotNull` sobre `idServicio` | 19 | Sí |
 | 11 | Autorización por rol | `controller/pedido/PedidoControlador.java` | `@PreAuthorize` sobre `crearPedido` | 30 | Sí |
 | 12 | **@RestController** | `controller/pedido/PedidoControlador.java` | `crearPedido()` | 31 | Sí |
@@ -37,14 +36,14 @@
 | 19 | **PostgreSQL** | `src/main/resources/application.properties` | `spring.datasource.url` | — | Configuración |
 | 20 | Mapeo entidad → DTO | `service/pedido/impl/PedidoServicioImpl.java` | `mapToRespuesta()` | 261 | Sí |
 | 21 | DTO de respuesta | `dto/respuesta/pedido/RespuestaPedido.java` | (POJO Lombok) | 16 | Sí |
-| 22 | **Serialización JSON** | `MappingJackson2HttpMessageConverter` | `writeInternal()` | — | No (framework) |
+| 22 | **Serialización JSON** | `MappingJackson2HttpMessageConverter` | `write()` | — | No (framework) |
 | 23 | Manejo de errores → ProblemDetail (RFC 7807) | `exception/ManejadorGlobalExcepciones.java` | `@ExceptionHandler` varios | 31-137 | Sí |
 | 24 | Respuesta HTTP `201 Created` | `controller/pedido/PedidoControlador.java` | `ResponseEntity.status(HttpStatus.CREATED)` | 34 | Sí |
 | 25 | Recepción en el cliente | `error.interceptor.ts` → `pedido-crear.component.ts` | `errorInterceptor` → `subscribe({next})` | 35 | Sí (Angular) |
 
 ---
 
-## Correspondencia con las clases que pide la directriz (3)
+## Correspondencia con las clases que pide el PDF (Parte 2, pasos 4, 6, 7 y 8)
 
 | Clase que pide la práctica | Nombre real en ARTISYNC | Ruta |
 |---|---|---|

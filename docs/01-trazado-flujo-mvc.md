@@ -165,7 +165,7 @@ Como la URI es `/api/v1/pedidos`, el filtro delega inmediatamente en el siguient
 **Método:** `doFilterInternal(HttpServletRequest, HttpServletResponse, FilterChain)` (línea 32)
 **Clase padre:** `OncePerRequestFilter`
 
-Este es el `JwtAuthFilter` que pide la directriz (3) de la práctica. Su nombre real en
+Este es el `JwtAuthFilter` que el PDF pide identificar (paso 4 de la Parte 2). Su nombre real en
 ARTISYNC es **`JwtAuthenticationFilter`**. Hace cuatro cosas en orden:
 
 **1) Lee la cabecera y aborta si no hay token:**

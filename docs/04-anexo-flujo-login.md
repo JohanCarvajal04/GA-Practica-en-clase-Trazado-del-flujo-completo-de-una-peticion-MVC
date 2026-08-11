@@ -29,7 +29,7 @@ petición **no** pasa por la validación del filtro JWT — porque todavía no h
 | 3 | Cadena de filtros: ruta pública | `config/SecurityConfig.java` | `filterChain()` | 64 |
 | 4 | **Rate limiting por IP** | `security/LoginRateLimitFilter.java` | `doFilterInternal()` | 35 |
 | 5 | Filtro JWT: sale de inmediato | `security/JwtAuthenticationFilter.java` | `doFilterInternal()` | 38-41 |
-| 6 | HandlerMapping | `RequestMappingHandlerMapping` | `getHandlerInternal()` | — |
+| 6 | HandlerMapping | `RequestMappingHandlerMapping` | `getHandler()` | — |
 | 7 | **Controlador** | `controller/seguridad/AuthController.java` | `login()` | 42 |
 | 8 | **Servicio** | `service/seguridad/impl/AuthServiceImpl.java` | `login()` | 126 |
 | 9 | Verificación de credenciales | `AuthServiceImpl` → `AuthenticationManager` → `CustomUserDetailsService` | `authenticate()` / `loadUserByUsername()` | 130 / 32 |
