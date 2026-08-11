@@ -58,10 +58,11 @@ dentro de una transacción y devuelve un DTO serializado a JSON con estado `201 
 
 | Documento | Descripción |
 |---|---|
-| [docs/01-trazado-flujo-mvc.md](docs/01-trazado-flujo-mvc.md) | Trazado paso a paso (11 pasos) con el código real de cada capa |
-| [docs/02-breakpoints-intellij.md](docs/02-breakpoints-intellij.md) | Dónde colocar los puntos de ruptura en IntelliJ IDEA y qué inspeccionar en cada uno |
-| [docs/03-bitacora-trazado.md](docs/03-bitacora-trazado.md) | **Tabla resumen**: archivo Java + método + línea de cada paso (entregable del punto 4) |
-| [docs/04-anexo-flujo-login.md](docs/04-anexo-flujo-login.md) | Anexo: flujo de `POST /api/auth/login`, la petición pública que *genera* el JWT |
+| **[docs/00-tabla-y-preguntas.md](docs/00-tabla-y-preguntas.md)** | ⭐ **El entregable real**: la tabla de trazado de 9 pasos (Parte 2) y las 5 preguntas de análisis respondidas (Parte 3) |
+| [docs/01-trazado-flujo-mvc.md](docs/01-trazado-flujo-mvc.md) | *(material extra)* Trazado paso a paso con el código real de cada capa |
+| [docs/02-breakpoints-intellij.md](docs/02-breakpoints-intellij.md) | *(material extra)* Dónde colocar los puntos de ruptura en IntelliJ IDEA y qué inspeccionar en cada uno |
+| [docs/03-bitacora-trazado.md](docs/03-bitacora-trazado.md) | *(material extra)* Tabla ampliada de 25 pasos: archivo Java + método + línea de cada paso (entregable del punto 4) |
+| [docs/04-anexo-flujo-login.md](docs/04-anexo-flujo-login.md) | *(material extra)* Anexo: flujo de `POST /api/auth/login`, la petición pública que *genera* el JWT |
 
 ---
 
